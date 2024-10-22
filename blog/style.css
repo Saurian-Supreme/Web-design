@@ -1,0 +1,55 @@
+/********************************************************************************** CSS RESET **********************************************************************************/
+* {  
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+
+}
+
+/********************************************************************************** Generic Elements **********************************************************************************/
+body{
+background-color: gray;
+
+font-family: 'Bebas Neue', Arial, sans-serif;
+
+min-height: 200vh;
+
+line-height: 1.6 ;
+}
+
+/********************************************************************************** Intro screen **********************************************************************************/
+
+.intro{
+    background-image: url(images/leaves.jpg);
+background-size: cover;
+background-position: center;
+
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+}
+
+.intro-container{
+text-align: center;
+background-color: rgba(0, 0, 0, 0.5);
+color: aliceblue;
+width: 25%;
+padding: 20px;
+margin: auto;
+align-self: center;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.intro h1{
+
+    font-weight: normal;
+    text-transform: uppercase;
+
+    letter-spacing: 10px;
+}
+
+.intro p{
+    line-height: 4;
+}
