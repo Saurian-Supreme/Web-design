@@ -5,16 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cast Coffe</title>
     <style>
-header{
-background-color: #6b4226;
-}
-
+        /* css Reset - targets all elements */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       
+        body{
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+           
+        }
+       
+        header{
+            background-color: #6b4226;
+            color: rgb(240, 240, 240);
+            text-align: center;
+            padding: 20px;
+        }
+        nav{
+            background-color: rgb(235, 233, 233);
+            padding: 15px;
+            /* Turnsa the navigation into a flexible space and seperates the links inside it */
+            display: flex;  
+            justify-content: space-around;
+        }
+        /* Hierarchy is targeted using spaces */
+        nav a{
+            color: #6e5e14;
+            text-decoration: none;
+            font-weight: bold;
+        }
+       
+        nav a:hover {
+            text-decoration: underline;
+            color: rgb(255, 218, 95);
+        }
+       
+        main{  
+            margin: 20px;
+            padding: 20px;
+        }
+        /*A ckass to help identify elements in our code*/
+        .box{
+            border-width: 1px;
+            border-color: rgb(114, 114, 87);
+            border-style: solid;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <!-- Website header -->
- <header>
-    <h1>Welcome to our coffee shop!</h1>
- </header>   
+    <header>
+        <h1>Welcome to Fredbear's Family Diner!</h1>
+    </header>
+   
+    <!-- Navigation -->
+    <nav>
+        <!-- # - will stay on the same page -->
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About us</a>
+        <a href="#">Contact</a>
+    </nav>
+    <a href="#">This will be deleted</a>
+   
+    <main>
+        <div class="box">
+            <h2>Our story</h2>
+            <p>The primary mascot of Fredbear's Family Diner is Fredbear himself, accompanied by Spring Bonnie. The two characters are the precursors of Freddy Fazbear and Bonnie respectively.</p>
+        </div>
+        <div class="box">
+           
+            <h2>Featured Fun!</h2>
+            <ul>
+                <li>Entertainment with Fredbear and spring bonnie!</li>
+                <li>food! Especially pizza!</li>
+                <li>fun for the whole family!</li>
+                <li>Even a fun place for the whole family!</li>
+            </ul>
+        </div>
+        <!-- Location Box -->
+        <div class="box">
+            <h2>Location</h2>
+            <p>Union St. Saint John, New Brunswick, NJ, United States, New Jersey</p>
+        </div>
+       
+    </main>
 </body>
 </html>
