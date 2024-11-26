@@ -1,246 +1,263 @@
-/********************************************************************************** CSS RESET **********************************************************************************/
-* {  
-    box-sizing: border-box;
+/*********************** CSS RESET ***********************/
+* {
+    box-sizing: border-box; /* So HTML will behave */
+
     margin: 0;
     padding: 0;
-    
-    
 }
 
-/********************************************************************************** Generic Elements **********************************************************************************/
-body{
-    background-color: rgb(201, 201, 201);
-    
-    font-family: 'Bebas Neue', Arial, sans-serif;
-    
+/*********************** GENERIC ELEMENTS ***********************/
+body {
+    background-color: #fafafa;
+
+    font-family: Montserrat, Arial, sans-serif;
+
+    line-height: 1.6;
+
     min-height: 200vh;
-    
-    line-height: 1.6 ;
 }
 
-/********************************************************************************** Intro screen **********************************************************************************/
+hr {
+    border: none;
 
-.intro{
+    /* Values: Size Width Color */
+    border-top: 1px solid #ccc;
+
+    /* !important makes it difficult to change
+        specific css commands later */
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+
+/*********************** INTRO SCREEN ***********************/
+.intro {
     background-image: url(images/leaves.jpg);
     background-size: cover;
     background-position: center;
-    
-    height: 100vh;
-    width: 100vw;
-    
+    background-attachment: fixed;
+
+    width: 100vw; /* vw - Viewport Width */
+    width: auto; /* 100vw is causing a small issue */
+
+    height: 100vh; /* vh - Viewport Height */
+
     display: flex;
+    
+    position: relative;
+    z-index: 1010;
 }
 
-.intro-container{
-    text-align: center;
+.intro-narrow {
+    height: 75vh;
+    z-index: 900;
+}
+
+.intro-container {
     background-color: rgba(0, 0, 0, 0.5);
-    color: aliceblue;
+    color: #fff;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* properties: X Y Radius Color */
+
     width: 25%;
+
+    align-self: center;
+    text-align: center;
+
     padding: 20px;
     margin: auto;
-    align-self: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.intro h1{
-    
+.intro h1 {
     font-weight: normal;
     text-transform: uppercase;
-    
-    letter-spacing: 10px;
+
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
 
 .intro p {
-    line-height: 4;
+    line-height: 2;
 }
-/********************************************************************************** CARDS **********************************************************************************/
+
+/*********************** CARDS ***********************/
 .card {
-    display: block;
-    
-    color: black;
+    display: block; /* Turns the link into a box */
+
+    color: #000;
     text-decoration: none;
 }
 
-.card-images {
+.card-image {
     height: 500px;
-    overflow: hidden;
+    overflow: hidden; /* Hides the excess content */
 }
 
-.card img{
+.card img {
     display: block;
-    
+
     width: 100%;
     height: 100%;
     object-fit: cover;
+
     transition-property: transform;
+    /* only transform will animate */
     transition-duration: 1s;
     transition-timing-function: ease-out;
 }
 
-.card h2{
-    margin-bottom: 50px;
+.card h2 {
     margin-top: 20px;
-    font-size: 1.2em;
+    margin-bottom: 50px;
+
+    font-size: 1.2em; /* 1.2x default font size */
 }
 
+/*
+    Change the image when we hover over the link
+*/
 .card:hover img {
-    transform: scale(1.2) rotate(360deg);
+    transform: scale(1.2);
+
     transition-duration: 10s;
     transition-timing-function: linear;
 }
-/********************************************************************************** container **********************************************************************************/
-.container{
-max-width: 1280px;
 
-margin:auto;
+/*********************** CONTAINER ***********************/
+.container {
+    max-width: 1280px;
+
+    margin: auto;
 }
 
-/********************************************************************************** Grid layout **********************************************************************************/
-.row{
+/*********************** GRID LAYOUT ***********************/
+.row {
     display: flex;
-flex-wrap: wrap;
+    flex-wrap: wrap;
 
     gap: 50px;
 }
 
-.two-columns .card{
-    width: calc((100% - 50px) / 2);
-}
-
-.three-columns .card{
-    width: calc((100% - 100px) /3);
-}
-
-/********************************************************************************** main content **********************************************************************************/
-.main-content{
-    margin-top: 10px;
-}
-
-.vertical-title {
-font-size: 0.9em;
-text-transform: uppercase;
-letter-spacing: 2px;
-
-transform-origin: 0 0;
-transform: rotate(90deg); translateY (5px)
-
-position: absolute;
-}
-
-/********************************************************************************** footer **********************************************************************************/
-
-.footer {
-    background-color: rgb(82, 82, 82);
-    color: rgb(0, 0, 0);
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.footer-content {
-    display: flex;
+.one-column .card {
     width: 100%;
 }
 
-.summary {
-    flex: 1;
+.two-columns .card {
+    width: calc((100% - 50px) / 2);
 }
 
-.nav {
-    flex: 1;
-    text-align: right;
+.three-columns .card {
+    width: calc((100% - 100px) / 3);
+   
 }
 
-.nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: flex-end;
+/*********************** MAIN CONTENT ***********************/
+.main-content {
+    margin-top: 100px;
 }
 
-.nav li {
-    margin-left: 20px;
+.content-narrow {
+    width: 50%;
+    min-width: 640px;
+
+    /* REMINDER: Centers
+    things horizontally */
+    margin: auto;
 }
 
-.nav a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
+.vertical-title {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    transform-origin: 0 0; /* rotate from the top left */
+    transform: rotate(90deg) translateY(5px);
+
+    position: absolute;
 }
 
-.footer {
-    background-color: rgb(155, 155, 155);
-    color: rgb(0, 0, 0);
+/*********************** FOOTER ***********************/
+.website-footer {
+    background-color: #eee;
     padding: 50px;
 }
 
-.footer .container {
+.website-footer .container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.footer .summery {
+.website-footer .summary {
     width: 33%;
 }
 
-.footer-links{
-list-style: none;
-margin-left: auto;
-columns: 2;
-gap: 50px;
+.footer-links {
+    list-style: none;
 
+    margin-left: auto;
+
+    columns: 2;
+    gap: 50px;
 }
 
-.footer-item{
+.footer-item {
     margin-bottom: 10px;
 }
 
 .footer-link {
-
-text-decoration: none;
-    color: black;
+    color: #000;
+    text-decoration: none;
 }
 
-
-.website-footer .copyright{
+.website-footer .copyright {
     width: 100%;
+
     margin-top: 50px;
+
     text-align: right;
 }
 
-.navbar{
-    background-color: aliceblue;
-    border-color: blueviolet;
+/*********************** NAVIGATION ***********************/
+.navbar {
+    background-color: #fff;
+
+    border-color: #eee;
     border-style: solid;
+    /* cancels out all borders */
     border-width: 0;
     border-bottom-width: 1px;
+
     position: fixed;
-top: 0;
-left: 0;
+    top: 0;
+    left: 0;
     width: 100%;
 
-    position: relative;
-    z-index: 100;
+    z-index: 1000;
 }
+
 .navbar .container {
-display: flex;
+    display: flex;
     justify-content: space-between;
 }
 
 .navbar a {
-    color: black;
+    color: #000;
     text-decoration: none;
     display: block;
-
 }
 
-.navbar-brand{
-    font-family: Oswald, Arial, Helvetica, sans-serif;
-font-weight: bold;
-font-size: 1.5em;
-align-content: center;
+.navbar-brand {
+    font-family: Cardo, Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    
+    /* scales the font by 150% of the
+        original size */
+    font-size: 1.5em;
+
+    align-content: center;
 }
 
-.navbar-nav{
+.navbar-nav {
     list-style: none;
     display: flex;
 }
@@ -250,5 +267,93 @@ align-content: center;
 }
 
 .navbar-nav .nav-link {
+    /* this means top/bottom left/right */
     padding: 30px 20px;
+}
+
+/*********************** STORY ***********************/
+.story-header h1 {
+    font-size: 2em;
+    margin-bottom: 25px;
+}
+
+.story-header p {
+    font-size: 1.5em;
+    font-family: Cardo, Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.story-header .byline {
+    margin-top: 10px;
+}
+
+/* Targets EVERYTHING inside
+    class="byline" */
+.story-header .byline * {
+    display: inline;
+    font-style: normal;
+}
+
+.story-content p, .story-content .row {
+    margin-bottom: 50px;
+}
+
+.story-footer {
+    background-color: #e4e4e4;
+
+    margin: 50px auto;
+    padding: 100px 50px;
+}
+
+.story-footer p {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icon {
+    background-color: #aaaaaa;
+
+display: block;
+
+    padding: 10px;
+    margin: 10px;
+
+    transition-property: background-color;
+    transition-duration: 0.15s;
+}
+
+.social-icon svg {
+    font-size: 24px;
+    
+display: block;
+
+width: 1em;
+height: 1em;
+
+transition-property: fill;
+transition-duration: 0.15s;
+}
+
+.social-icon:hover {
+
+    background-color: #000;
+}
+
+.social-icon:hover svg {
+   fill: #fff;
+}
+
+.four-columns .card {
+    width: calc((100% - 150px) / 4);
+}
+
+.keep-reading {
+    background-color: #e4e4e4;
+    padding-top: 50px;
 }
