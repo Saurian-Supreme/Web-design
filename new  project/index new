@@ -1,0 +1,79 @@
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wireless Headphones - Product Detail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>TechStore</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+      
+    <main>
+        <div class="product-detail">
+            <div class="product-images">
+                <img src="headphones.jpg" alt="Wireless Headphones" class="main-image">
+                <div class="thumbnail-images">
+                    <img src="headphones1.jpg" alt="Headphones - Side View">
+                    <img src="headphones2.jpg" alt="Headphones - Detail View">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <h2>Wireless Noise Cancelling Headphones</h2>
+                <p class="price">$199.99</p>
+                <p class="description">
+                    These wireless headphones are perfect for anyone who enjoys music, travel, or working out. 
+                    With noise-cancelling technology, comfortable ear pads, and long battery life, these headphones 
+                    will keep you immersed in your favorite tunes all day long.
+                </p>
+
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>Noise Cancelling Technology</li>
+                    <li>Up to 30 hours of battery life</li>
+                    <li>Lightweight and Comfortable</li>
+                    <li>Bluetooth 5.0</li>
+                    <li>Quick Charging</li>
+                </ul>
+
+                <div class="product-actions">
+                    <button class="btn add-to-cart">Add to Cart</button>
+                    <button class="btn buy-now">Buy Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews">
+            <h3>Customer Reviews</h3>
+            <div class="review">
+                <p><strong>Sarah Johnson</strong> - ★★★★☆</p>
+                <p>"Great sound quality and very comfortable for long listening sessions. The noise-cancelling works 
+                   really well on flights!"</p>
+            </div>
+            <div class="review">
+                <p><strong>Mark Smith</strong> - ★★★☆☆</p>
+                <p>"Good sound, but I wish the battery lasted a bit longer. Overall, good value for the price."</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 TechStore. All Rights Reserved.</p>
+    </footer>
+</body>
+
+</html>

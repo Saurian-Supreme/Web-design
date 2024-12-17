@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Blog :: Story</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <!-- WEBSITE NAVIGATION -->
+    <nav class="navbar">
+        <div class="container">
+            
+            <a href="index.html" class="navbar-brand">Fancy Blog</a>
+            
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Featured Stories</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Shop</a>
+                </li>
+            </ul>
+            
+        </div>
+    </nav>
+    
+    <header class="intro intro-narrow"></header>
+    
+    <!-- CONTAINER -->
+    <div class="container">
+        
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            
+            <!-- 
+            contact forms need back-end processing to work,
+            using language like PHP or Node.js.
+            
+            It is Not possible to senda form through normal HTML,
+            so in this example, we will use the email client insted
+            -->
+            
+            <form action="mailro:info@example.com" method="post" enctype="text/plain" class="content-narrow website-form">
+                <div class="form-element">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" required placeholder="Ian Borg">
+                </div>
+                
+                <div class="form-element">
+                    <label for="email">email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                
+                
+                <div class="form-element">
+                    <label for="subject">subject</label>
+                    
+                    <select name="subject" id="subject">
+                        <option value="i have a problem">i have a problem</option>
+                        <option value="i want to share a story">i hwant to share a story</option>
+                    </select>
+                </div>
+                
+                
+                <div class="form-element">
+                    <textarea name="messgae" id="">message</textarea>
+                </div>
+                
+                <div class="form-element">
+                    <button type="submit"> send</button> 
+                    <button type="reset"> reset</button>
+                </div>
+            </form>
+        </main>
+        
+    </div>
+    
+    <div class="keep-reading">
+      <div class="container">
+        <div class="row four-columns">
+                    
+            <a href="story.html" class="card">
+                <div class="card-images">
+                    <img src="images/mountains.jpg" alt="jeff">
+                </div>
+                
+                <h2>from where id jump off from ;)</h2>
+            </a>
+            
+            <a href="story.html" class="card">
+                <div class="card-images">
+                    <img src="images/space-invader.jpg" alt="pew-pew">
+                </div>
+                
+                <h2>average in videogames too (how?!?)</h2>
+            </a>
+            
+            <a href="story.html" class="card">
+                <div class="card-images">
+                    <img src="images/painting.jpg" alt="only-average">
+                </div>
+                
+                <h2>only thing im good at (im average)</h2>
+            </a>
+
+            <a href="story.html" class="card">
+                <div class="card-images">
+                    <img src="images/painting.jpg" alt="only-average">
+                </div>
+                
+                <h2>only thing im good at (im average)</h2>
+            </a>    
+      </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="website-footer">
+        <div class="container">
+            
+            <p class="summary">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae totam cumque quasi, voluptatem nobis facilis vero mollitia sunt labore ipsam assumenda soluta laboriosam tenetur, corporis in temporibus blanditiis eaque provident!
+            </p>
+            
+            <ul class="footer-links">
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Home</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Stories</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">About</a>
+                </li>
+                <li class="footer-item">
+                    <a href="#" class="footer-link">Shop</a>
+                </li>
+            </ul>
+            
+            <p class="copyright">
+                &copy; My Fancy Blog
+            </p>
+            
+        </div>
+        
+        
+        
+    </footer>    
+    
+</body>
+</html>
